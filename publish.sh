@@ -9,7 +9,7 @@ echo "Rename AdobeMobileLibrary"
 
 echo ""
 git add *
-git commit -m "Release $1"
+git commit -am "Release $1"
 git push origin cocoapod
 
 git tag v$1-cocoapod
