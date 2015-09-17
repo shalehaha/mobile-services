@@ -18,5 +18,5 @@ Pod::Spec.new do |s|
   s.frameworks = "UIKit", "SystemConfiguration"
   s.libraries = "sqlite3.0"
   s.ios.vendored_library = 'AdobeMobileLibrary/libAdobeMobile.a'
-  s.vendored_libraries = "libAdobeMobile.a"
+  s.vendored_libraries = "AdobeMobileLibrary/libAdobeMobile.a"
 end
