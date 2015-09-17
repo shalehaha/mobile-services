@@ -17,6 +17,6 @@ Pod::Spec.new do |s|
   s.prepare_command = "touch Empty.m && echo '#import \"ADBMobile.h\"\n@implementation ADBMobile (ForceLoad) @end' > Empty.m"
   s.frameworks = "UIKit", "SystemConfiguration"
   s.libraries = "sqlite3.0"
-  spec.ios.vendored_library = 'AdobeMobileLibrary/libAdobeMobile.a'
+  s.ios.vendored_library = 'AdobeMobileLibrary/libAdobeMobile.a'
   s.vendored_libraries = "libAdobeMobile.a"
 end
