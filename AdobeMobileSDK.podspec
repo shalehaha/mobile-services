@@ -18,4 +18,10 @@ Pod::Spec.new do |s|
   s.frameworks = "UIKit", "SystemConfiguration"
   s.libraries = "sqlite3.0"
   s.vendored_libraries = "AdobeMobileLibrary/libMobileLibrary.a"
+  
+  s.subspec 'Extension' do |extension|
+    extension.frameworks   = "UIKit", "SystemConfiguration"
+    extension.libraries "sqlite3.0"
+    extension.vendored_libraries = "AdobeMobileLibrary/libMobileLibrary_extension.a"
+  end
 end
