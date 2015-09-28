@@ -24,4 +24,9 @@ Pod::Spec.new do |s|
     extension.libraries "sqlite3.0"
     extension.vendored_libraries = "AdobeMobileLibrary/libMobileLibrary_extension.a"
   end
+
+  s.subspec 'WatchOS2' do |watchos2|
+    watchos2.libraries "sqlite3.0"
+    watchos2.vendored_libraries = "AdobeMobileLibrary/libMobileLibrary_watch.a"
+  end
 end
