@@ -25,14 +25,14 @@ Pod::Spec.new do |s|
 
   s.subspec 'Extension' do |extension|
     extension.platform     = :ios, '5.0'
-    extension.source_files  = "AdobeMobileLibrary/*.h", 'Empty.m'  
+    ios.source_files  = "AdobeMobileLibrary/*.h", "AdobeMobileLibrary/Empty.m"  
     extension.frameworks = "UIKit", "SystemConfiguration"
     extension.libraries = "sqlite3.0"
     extension.vendored_libraries = "AdobeMobileLibrary/libMobileLibrary_extension.a"
   end
 
   s.subspec 'WatchOS2' do |watchos2|
-    watchos2.source_files  = "AdobeMobileLibrary/*.h", 'Empty.m'  
+    ios.source_files  = "AdobeMobileLibrary/*.h", "AdobeMobileLibrary/Empty.m"  
     watchos2.libraries = "sqlite3.0"
     watchos2.vendored_libraries = "AdobeMobileLibrary/libMobileLibrary_watch.a"
   end
