@@ -38,10 +38,10 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'TVOS' do |tvos|
-    tvos.platform  = :tvos, '2.0'
+    tvos.platform  = :tvos, '9.0'
     tvos.source_files  = "AdobeMobileLibrary/*.h", "AdobeMobileLibrary/Empty.m"  
     tvos.libraries = "sqlite3.0"
     tvos.vendored_libraries = "AdobeMobileLibrary/libMobileLibrary_TV.a"
   end
-  
+
 end
