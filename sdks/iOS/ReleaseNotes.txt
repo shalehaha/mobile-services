@@ -5,6 +5,134 @@ Included are notes from the latest major revision to current.
 For full SDK documentation, please visit:
 https://marketing.adobe.com/resources/help/en_US/mobile/ios/
 
+4.13.1 (20 Oct, 2016)
+- Acquisition - The SDK now supports for custom acquisition data to be returned appropriatly by AdobeDataCallback invocations
+- Target - Visitor ID Service params are now passed in Target requests via mboxParams
+- Fixed an issue that was causing build warnings when targeting iOS versions older than 8
+- Analytics - Fixed an issue that could cause a crash when trying to sync new ID to the VisitorID service at the same time as sending tracking hits to Analytics
+
+4.13.0 (15 Sept, 2016)
+- iOS 10 support
+- New Feature - support for stand-alone extensions
+- Deeplinking - added documentation showing how to track 3rd Party Deferred Deep Links
+
+4.12.0 (18 Aug, 2016)
+- Visitor ID Service - Added new method to append visitor identity to a given URL in-order to transfer identity to a web-based implementation.
+- In App Messaging - Fixed an issue that could cause a crash when setting the "target" attribute to "_blank" in an HTML <a> tag in a custom full screen message
+
+4.11.1 (28 Jul, 2016)
+- Lifecycle - Fixed an issue that could cause a crash when sending non-property list objects to collectLifecycleDataWithAdditionalData:
+- In App Messaging - Fixed a bug that prevented fullscreen and alert messages from displaying after a local notification was triggered
+- In App Messaging - Fixed an issue where fullscreen messages were not resized in split view mode (iOS 9+ iPad)
+
+4.11.0 (16 Jun, 2016)
+- Target - New Target API for passing in requestLocation parameters
+- Target - Fixed the bug where mboxHost/orderId/orderTotal were not correctly handled in legacy Target API
+- Postbacks/In-App Messaging - Removed requirements on analytics for Postbacks and In-App Messaging 
+- Postbacks - Fixed the issue where post body was encoded when the content type is application/json  
+- Analytics - Fixed the issue of trackTimedAction not allowing non-string keys and values in context data  
+
+4.10.0 (20 May, 2016)
+- New Feature - New Target API
+- New Feature - PII data collection
+- In-App Messaging - Fixed a crash issue caused by trying to access a zombie messages array
+
+4.9.0 (5 May, 2016)
+- New Feature - deep linking with acquisition
+- New Feature - callback system allowing access to acquisition, deep link, and lifecycle information
+- New Feature - message payload support for local and push messaging 
+
+4.8.6 (9 Mar, 2016)
+- In-App Messaging - fixed an issue that would cause full screen messages to not appear properly in specific environments
+- Analytics - fixed an issue causing failed requests to not be retried in older operating systems
+- Visitor ID Service - fixed a crash issue caused by trying to retain a zombie object
+- Lifecycle - fixed an issue that would cause false crashes to be reported due to background activity
+- Fixed a crash issue caused by race conditions in poor network environments
+
+4.8.5 (18 Feb, 2016)
+- Configuration - privacy status is now respected for Target, Audience Manager, and Visitor ID Service activity
+- In-App Messaging - fixed an issue that could cause a crash for alert messages on iOS 9+
+- Audience Manager - timeout for AAM requests is now configurable in the Mobile Services UI and in ADBMobileConfig.json
+- Fixed an NSException crash caused by calling [NSUserDefaults resetStandardUserDefaults] when using WatchConnectivity for a WatchOS2 app
+
+4.8.4 (21 Jan, 2016)
+- Postbacks - fixed a bug where requests were not triggered for the lifetime value amount trait
+- Visitor ID Service - fixed a memory leak
+- In App Messaging - fixed a memory leak
+- Configuration - fixed an issue that could cause a crash due to malformed json
+
+4.8.3 (3 Dec, 2015)
+- Configuration - fixed an issue that prevented proper migration of defaults when using app groups
+
+4.8.2 (30 Nov, 2015)
+- Callbacks - Fixed an issue that could cause a crash when remote callbacks were overriding local callbacks.
+
+4.8.1 (4 Nov, 2015)
+- Visitor ID Service - added support to AAM for customer IDs and authentication state
+- Configuration - fixed an issue that could potentially cause a crash on app install
+
+4.8.0 (2 Nov, 2015)
+- Visitor ID Service - added support to send in an authentication state when syncing Visitor ID Service identifiers
+- Audience Manager - added support for automatic forwarding of Analytics data to Audience Manager
+- Analytics - fixed an issue where backdated hits would contain current device information
+
+4.7.1 (23 Oct, 2015)
+- Target - Added methods to retrieve PCID and SessionID for user
+- Target - Fixed a bug with cookie handling
+
+4.7.0 (15 Oct, 2015)
+- New Feature - TvOS compatibility
+- In App Messaging - Fixed a bug causing a crash for alert message types when no confirm button text was provided
+- Acquisition - SSL Support
+
+4.6.1 (17 Sept, 2015)
+- Fixed an issue that broke backwards compatibility with Xcode versions older than 7
+
+4.6.0 (16 Sept, 2015)
+- New Feature - WatchOS2 (WatchKit) compatibility
+- New Feature - support for push messaging
+- New Feature - support for 3rd party callbacks
+- Acquisition - enhanced functionality added for acquisition
+- Analytics - fixed a bug preventing an aid from being re-generated if Visitor ID Service was enabled, then later disabled
+
+4.5.6 (2 Sept, 2015)
+- Fixed an issue preventing proper archiving while bitcode is enabled
+
+4.5.5 (20 Aug, 2015)
+- Added support for iOS 9 / Xcode 7 bitcode builds
+- Configuration - made a small change to configuration loading to support better integration with PhoneGap
+- Analytics - Fixed a issue that could cause sqlite exception.
+
+4.5.4 (23 June, 2015)
+- In App Messaging - fixed a bug where messages were being inappropriately removed from the blacklist on launch
+
+4.5.3 (18 June, 2015)
+- In App Messaging - fixed a bug where messages were incorrectly triggered if all messages were disabled at once
+- In App Messaging - fixed clickthrough url issues for fullscreen messages
+- In App Messaging - fixed a bug where messages were not being triggered after their showrule was changed
+- Visitor ID Service - fixed an issue causing location hint to be set incorrectly for visitor id service on analytics calls
+- Analytics - Added an optional config item to better handle backdating session info hit
+
+4.5.2 (6 May, 2015)
+- Fixed a crashing issue for iOS versions lower than 8.
+
+4.5.1 (1 May, 2015)
+- iOS Extension SDK - Fixed a issue that could cause out of order hits for timestamp enabled report suite.
+
+4.5.0 (27 Apr, 2015)
+- New - Added support for iOS Extension Apps
+- Check out our Apple Watch Example in GitHub: https://github.com/Adobe-Marketing-Cloud/mobile-services/releases/tag/v1.0-iOS-watch
+- Check out the documentation for iOS Extension SDK : https://marketing.adobe.com/resources/help/en_US/mobile/ios/ios_ext.html
+
+4.4.1 (16 Apr, 2015)
+- Added Locale(NSLocale) to in-app messaging traits
+- Added custom data on lifecycle to in-app messaging traits
+- Added ssl support for Target calls
+
+4.4.0 (15 Jan, 2015)
+- New - Ability to add custom context data to lifecycle
+- Version number is now included in the ADBMobile.h
+
 4.3.0 (20 Nov, 2014)
 - New - Adobe Marketing Cloud ID integration
 - Improved debug logs for clarity
